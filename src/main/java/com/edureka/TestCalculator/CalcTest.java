@@ -54,10 +54,15 @@ public class CalcTest
 	    int len = text.length();
 
         String bodyText = driver.findElement(By.xpath("/html/body")).getText();
-       
-	driver.findElement(By.xpath("/html/body/form/input")).;
-
         System.out.println(bodyText);
+	    driver.findElement(By.xpath("/html/body/form/input[1]")).sendKeys("12");
+	    driver.findElement(By.xpath("/html/body/form/input[2]")).sendKeys("38");
+        
+	    driver.findElement(By.xpath("/html/body/form/div/label/input")).click();
+	    
+	    bodyText = driver.findElement(By.xpath("/html/body")).getText();
+	    
+	    System.out.println(bodyText);
 	    //Assert.assertEquals(bodyText.substring(0, len),text);
         
         driver.quit();
