@@ -19,7 +19,7 @@ public class CalcTest
 	    String myURL = "http://130.211.229.175:9090/calculator/";
 	    FirefoxOptions options = new FirefoxOptions();
         
-        options.addArguments("--headless");
+        //options.addArguments("--headless");
 	    options.setCapability("requireWindowFocus", true);
         String mygecko=System.getenv("HOME") + "/Downloads/geckodriver";
         
