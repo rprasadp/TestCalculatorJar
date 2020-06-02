@@ -16,12 +16,12 @@ public class CalcTest
 		
 	    WebDriver driver;
 	    
-	    String myURL = "http://130.211.229.175:9090/calculator/";
+	    String myURL = "http://35.188.0.176:9090/calculator/";
 	    FirefoxOptions options = new FirefoxOptions();
         
         //options.addArguments("--headless");
 	    options.setCapability("requireWindowFocus", true);
-        String mygecko=System.getenv("HOME") + "/Downloads/geckodriver";
+        String mygecko="/home/edureka/Downloads/geckodriver";
         
         System.setProperty("webdriver.gecko.driver",mygecko);
         
