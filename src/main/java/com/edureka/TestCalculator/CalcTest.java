@@ -59,7 +59,8 @@ public class CalcTest
 	    driver.findElement(By.xpath("/html/body/form/input[2]")).sendKeys("38");
         
 	    driver.findElement(By.xpath("/html/body/form/input[3]")).click();
-
+	    Thread.sleep(5000);
+	    
 	    bodyText = driver.findElement(By.xpath("/html/body")).getText();
 	    
 	    System.out.println(bodyText);
