@@ -58,13 +58,14 @@ public class CalcTest
 	    driver.findElement(By.xpath("/html/body/form/input[1]")).sendKeys("12");
 	    driver.findElement(By.xpath("/html/body/form/input[2]")).sendKeys("38");
         
-	    driver.findElement(By.xpath("/html/body/form/div/label/input")).click();
-	    
+	    driver.findElement(By.xpath("/html/body/form/input[3]")).click();
+
 	    bodyText = driver.findElement(By.xpath("/html/body")).getText();
 	    
 	    System.out.println(bodyText);
 	    //Assert.assertEquals(bodyText.substring(0, len),text);
-        
+	    Thread.sleep(5000);
+	    
         driver.quit();
 	}
 }
