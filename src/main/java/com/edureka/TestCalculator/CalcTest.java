@@ -50,8 +50,8 @@ public class CalcTest
         
         Thread.sleep(5000);
         
-	    String text = prop.getProperty("exp_text");
-	    int len = text.length();
+	    String text = prop.getProperty("exp_add_text");
+	    //int len = text.length();
 
         String bodyText = driver.findElement(By.xpath("/html/body")).getText();
         System.out.println(bodyText);
@@ -66,7 +66,13 @@ public class CalcTest
 	    bodyText = driver.findElement(By.xpath("/html/body")).getText();
 	    
 	    System.out.println(bodyText);
+	    
 	    //Assert.assertEquals(bodyText.substring(0, len),text);
+	    
+	    Assert.assertTrue(bodyText.contains(text), text + " not found!" );
+	    
+	    Assert.assertTrue(bodyText.contains(text), "50 not found!" );
+	    
 	    Thread.sleep(5000);
 	    
         driver.quit();
