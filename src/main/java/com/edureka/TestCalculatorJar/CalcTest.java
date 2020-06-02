@@ -1,4 +1,4 @@
-package com.edureka.TestCalculator;
+package com.edureka.TestCalculatorJar;
 
 import java.io.FileInputStream;
 import java.util.Properties;
@@ -20,14 +20,14 @@ public class CalcTest
 		
 	    WebDriver driver;
 	    
-	    Properties prop = new Properties();
-	    FileInputStream f = new FileInputStream("./data.properties");
-	    prop.load(f);
-	    String myIP = prop.getProperty("public_ip");
-	    String myPort = prop.getProperty("tomcat_port");
-	    String myAppName = prop.getProperty("app_name");
-	    String myURL = "http://" + myIP + ":" + myPort + "/" + myAppName;
-	    //String myURL = "http://35.226.154.148:9090/calculator/";
+	    //Properties prop = new Properties();
+	    //FileInputStream f = new FileInputStream("./data.properties");
+	    //prop.load(f);
+	    //String myIP = prop.getProperty("public_ip");
+	    //String myPort = prop.getProperty("tomcat_port");
+	    //String myAppName = prop.getProperty("app_name");
+	    //String myURL = "http://" + myIP + ":" + myPort + "/" + myAppName;
+	    String myURL = "http://130.211.229.175:9090/calculator/";
 	    FirefoxOptions options = new FirefoxOptions();
         
         //options.addArguments("--headless");
@@ -50,7 +50,8 @@ public class CalcTest
         
         Thread.sleep(5000);
         
-	    String text = prop.getProperty("exp_add_text");
+	    //String text = prop.getProperty("exp_add_text");
+	    String text = "Addition";
 	    //int len = text.length();
 
         String bodyText = driver.findElement(By.xpath("/html/body")).getText();
